@@ -1,6 +1,5 @@
-//your code here
 
-let arr = ["Tajmahal", "The Virupaksha Temple", "an Victoria Memorial"];
+let arr = ["Tajmahal", "The Virupaksha Temple", "Victoria Memorial"];
 
 /*
     {
@@ -27,14 +26,29 @@ for (let i = 0; i < arr.length; i++) {
   mp[articleLessString] = arr[i];
   arr2.push(articleLessString);
 }
-console.log(mp);
-
 
 arr2.sort(); // bubble sort
 
-// ['Tajmahal', 'Victoria Memorial', 'Virupaksha Temple']
-console.log(arr2);
 for (let i = 0; i < arr2.length; i++) {
   arr2[i] = mp[arr2[i]]; // "An Victoria Memorial"
 }
 console.log(arr2);
+
+const ulElement = document.getElementById('band');
+
+arr2.forEach((bandName) => {
+  const liElement = document.createElement('li');
+  liElement.textContent = bandName;
+  ulElement.appendChild(liElement);
+});
+
+
+
+
+
+
+
+
+
+
+
